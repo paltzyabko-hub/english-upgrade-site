@@ -11,22 +11,13 @@
 </header>
 
 <section class="hero">
-  <div class="pills"><span class="pill">UNIT 1</span><span class="pill">PAGE 2</span><span class="pill">For Mark</span></div>
+  <div class="pills"><span class="pill">UNIT 1</span><span class="pill">PAGE 2</span><span class="pill">Video Lesson</span></div>
   <h1>Reading Strategy #1</h1>
   <p>Skimming and scanning: read faster, find information, and answer with confidence.</p>
 </section>
 
 <main class="wrap">
-  <div class="tabs">
-    <button class="tab active" onclick="openTab('video', this)">🎥 Video</button>
-    <button class="tab" onclick="openTab('audio', this)">🎧 Audio</button>
-    <button class="tab" onclick="openTab('vocab', this)">📚 Vocabulary</button>
-    <button class="tab" onclick="openTab('grammar', this)">📖 Grammar</button>
-    <button class="tab" onclick="openTab('check', this)">📷 Check Page</button>
-    <button class="tab" onclick="openTab('ai', this)">🤖 AI Coach</button>
-  </div>
-
-  <section id="video" class="panel active">
+  <section class="panel">
     <h2>🎥 Video Lesson</h2>
     <div class="two">
       <div class="video-frame">
@@ -40,26 +31,49 @@
           <li><b>Scanning</b> — looking for specific information such as names, dates or numbers.</li>
         </ul>
         <a class="btn" href="https://www.youtube.com/watch?v=mbsAtyoNIpU" target="_blank">Watch on YouTube</a>
+        <a class="btn light" href="../assets/downloads/U1-002_Video_Notes.pdf" download>Download PDF notes</a>
       </div>
     </div>
   </section>
 
-  <section id="audio" class="panel"><h2>🎧 Audio</h2><div class="card">Audio will be added next.</div></section>
-  <section id="vocab" class="panel"><h2>📚 Vocabulary</h2><div class="card">Vocabulary trainer will be added next.</div></section>
-  <section id="grammar" class="panel"><h2>📖 Grammar</h2><div class="card">Grammar mini-practice will be added next.</div></section>
-  <section id="check" class="panel"><h2>📷 Check Workbook Page</h2><div class="card">Photo checking tool will be added next.</div></section>
-  <section id="ai" class="panel"><h2>🤖 AI Coach</h2><div class="card">AI prompt will be added next.</div></section>
+  <section class="panel">
+    <h2>📖 Video Notes</h2>
+    <p><b>Learning goal:</b> Understand the difference between skimming and scanning and know when to use each strategy.</p>
+
+    <div class="notes-grid">
+      <div class="note">
+        <h3>Key Ideas</h3>
+        <ol>
+          <li><b>Skimming</b> means reading quickly to understand the main idea.</li>
+          <li><b>Scanning</b> means looking for specific information such as names, dates, numbers or keywords.</li>
+          <li>Read the title and headings before reading the whole text.</li>
+          <li>Do not translate every word. Focus on meaning.</li>
+          <li>Return to the text when you need evidence for an answer.</li>
+        </ol>
+      </div>
+
+      <div class="note">
+        <h3>Challenge for Mark</h3>
+        <p>Before reading a new text, spend <b>30 seconds</b> looking only at the title and headings.</p>
+        <p>Then write one sentence:</p>
+        <p><i>“I think this text is about...”</i></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>📚 Useful Words from the Video</h2>
+    <table class="word-table">
+      <tr><th>Word</th><th>Meaning</th></tr>
+      <tr><td>skim</td><td>read quickly for the main idea</td></tr>
+      <tr><td>scan</td><td>search for specific information</td></tr>
+      <tr><td>heading</td><td>title of a section</td></tr>
+      <tr><td>keyword</td><td>important word</td></tr>
+      <tr><td>evidence</td><td>information proving an answer</td></tr>
+    </table>
+  </section>
 
   <div class="footer-nav"><a class="small-link" href="page001.html">← U1-001</a><a class="small-link" href="page003.html">U1-003 →</a></div>
 </main>
-
-<script>
-function openTab(id, btn){
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
-}
-</script>
 </body>
 </html>
