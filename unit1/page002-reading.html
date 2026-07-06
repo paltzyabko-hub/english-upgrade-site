@@ -13,11 +13,12 @@ section{background:white;border-radius:26px;padding:26px;box-shadow:0 10px 30px 
 h2{margin-top:0;color:#06245c;font-size:30px}.card{background:#fbfdff;border:2px solid #e3f0fb;border-radius:22px;padding:20px}
 audio{width:100%;margin:10px 0 14px}.btn,button{display:inline-block;border:0;border-radius:14px;padding:12px 16px;font-weight:900;background:#06245c;color:white;margin:8px 8px 0 0;cursor:pointer}
 .btn.light,button.light{background:#eef8ff;color:#06245c;border:2px solid #cceeff}
-.transcript{max-height:420px;overflow:auto;background:#fbfdff;border:2px solid #e3f0fb;border-radius:18px;padding:18px;white-space:pre-wrap}
+.transcript{max-height:360px;overflow:auto;background:#fbfdff;border:2px solid #e3f0fb;border-radius:18px;padding:18px;white-space:pre-wrap}
 .quiz-card{background:#fbfdff;border:2px solid #e3f0fb;border-radius:24px;padding:24px}
 .progress{font-weight:900;color:#06245c;margin-bottom:12px}
 .option{display:block;background:white;border:2px solid #e3f0fb;border-radius:14px;padding:12px;margin:10px 0;cursor:pointer}
 .option:hover{border-color:#10a7a7}
+input[type=text], textarea{width:100%;border:2px solid #e3f0fb;border-radius:14px;padding:12px;font:inherit;margin:8px 0}
 .feedback{font-weight:900;margin-top:14px;padding:12px;border-radius:14px;display:none}
 .correct{color:#0b7a3b;background:#eafaf2;border:2px solid #bdeed1}
 .wrong{color:#b00020;background:#fff2f2;border:2px solid #ffd1d1}
@@ -29,7 +30,7 @@ audio{width:100%;margin:10px 0 14px}.btn,button{display:inline-block;border:0;bo
 <div class="top">English Upgrade</div>
 <header class="hero">
 <span class="pill">UNIT 1</span><span class="pill">PAGE 2</span><span class="pill">Reading + Audio</span>
-<h1>Reading & Audio</h1>
+<h1>Reading & Audio (Multiple Choice)</h1>
 <p>Listen to the story, read the transcript, and answer one question at a time.</p>
 </header>
 <main>
@@ -37,18 +38,12 @@ audio{width:100%;margin:10px 0 14px}.btn,button{display:inline-block;border:0;bo
 <h2>🎧 Read Smart, Not Hard</h2>
 <div class="card">
 <p>Listen to the audio. Then read the transcript if needed.</p>
-<audio controls>
-<source src="../assets/audio/u1-002-listening.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+<audio controls><source src="../assets/audio/u1-002-listening.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
 <a class="btn" href="../assets/audio/u1-002-listening.mp3" download>Download MP3</a>
 <a class="btn light" href="../assets/downloads/U1-002_Reading_Audio_Transcript.pdf" download>Download Transcript PDF</a>
 </div>
 </section>
-
-<section>
-<h2>📄 Transcript</h2>
-<div class="transcript">Mark had an English reading test on Friday morning. As soon as he entered the classroom, he noticed that the test looked much longer than usual. There were three texts, several pages of questions, and only sixty minutes to finish everything.
+<section><h2>📄 Transcript</h2><div class="transcript">Mark had an English reading test on Friday morning. As soon as he entered the classroom, he noticed that the test looked much longer than usual. There were three texts, several pages of questions, and only sixty minutes to finish everything.
 
 At first, Mark felt nervous. He looked at the first article and thought, “There are too many words. I’ll never finish this on time.”
 
@@ -80,144 +75,71 @@ Mrs. Green explained that good readers know how to find information. They skim w
 
 By the end of the month, Mark was reading faster, understanding more and feeling much more confident.
 
-He realised that successful readers are not always the students with the biggest vocabulary. Very often, they are simply the students who know when to skim, when to scan, and when to read carefully.</div>
-</section>
-
+He realised that successful readers are not always the students with the biggest vocabulary. Very often, they are simply the students who know when to skim, when to scan, and when to read carefully.</div></section>
 <section>
 <h2>🎯 Reading & Listening Quiz</h2>
 <p>Answer one question at a time. You will get immediate feedback.</p>
 <div class="quiz-card">
-  <div class="progress" id="progress">Question 1 of 10</div>
-  <h3 id="questionText"></h3>
-  <div id="options"></div>
-  <button onclick="checkAnswer()">Check</button>
-  <button class="light" onclick="nextQuestion()" id="nextBtn" style="display:none">Next →</button>
-  <div id="feedback" class="feedback"></div>
-  <div id="score" class="score"></div>
+<div class="progress" id="progress"></div>
+<h3 id="questionText"></h3>
+<div id="answerArea"></div>
+<button onclick="checkAnswer()">Check</button>
+<button class="light" onclick="nextQuestion()" id="nextBtn" style="display:none">Next →</button>
+<div id="feedback" class="feedback"></div>
+<div id="score" class="score"></div>
 </div>
 </section>
-
 <div class="nav"><a class="small-link" href="page002.html">← Menu</a><a class="small-link" href="page002-video.html">Video →</a></div>
 </main>
-
 <script>
-const questions = [
-  {
-    q: "Why did Mark feel nervous at the beginning of the test?",
-    options: ["He arrived late.", "The reading test looked much longer than usual.", "He forgot his dictionary.", "Mrs. Green was angry."],
-    answer: 1,
-    exp: "Correct. Mark was nervous because the test had three texts, many questions and only sixty minutes."
-  },
-  {
-    q: "What was the title of the first article?",
-    options: ["The Secret Life of Bees", "The History of Flowers", "How to Pass English Tests", "The Life of Daniel"],
-    answer: 0,
-    exp: "Correct. The first article was called “The Secret Life of Bees”."
-  },
-  {
-    q: "Which words helped Mark predict the topic of the article?",
-    options: ["football, results, business", "flowers, honey, communication, environment", "school, homework, grades", "teacher, classroom, exam"],
-    answer: 1,
-    exp: "Correct. These words helped him understand that the article was about bees."
-  },
-  {
-    q: "What is skimming in this story?",
-    options: ["Reading quickly to understand the general topic", "Looking for one exact number", "Translating every word", "Skipping all questions"],
-    answer: 0,
-    exp: "Correct. Skimming means reading quickly for the main idea."
-  },
-  {
-    q: "What did Mark scan for in the bee article?",
-    options: ["A person’s name", "A colour", "A number", "A place"],
-    answer: 2,
-    exp: "Correct. He needed to find how far a bee can travel in one day."
-  },
-  {
-    q: "How far can a bee travel in one day, according to the text?",
-    options: ["One kilometre", "Five kilometres", "Ten kilometres", "Twenty kilometres"],
-    answer: 2,
-    exp: "Correct. The text says a bee may travel up to ten kilometres."
-  },
-  {
-    q: "What did Daniel do that made the task slower?",
-    options: ["He answered too quickly.", "He translated almost every word.", "He ignored all the questions.", "He forgot to write his name."],
-    answer: 1,
-    exp: "Correct. Daniel translated nearly every word, which made reading much slower."
-  },
-  {
-    q: "What did Mrs. Green say good readers know how to do?",
-    options: ["Memorize every text", "Find information", "Avoid hard texts", "Write faster than others"],
-    answer: 1,
-    exp: "Correct. Mrs. Green explained that good readers know how to find information."
-  },
-  {
-    q: "When should Mark use scanning?",
-    options: ["When he needs the main idea", "When he needs specific details", "When he wants to read for fun", "When he writes a composition"],
-    answer: 1,
-    exp: "Correct. Scanning is used for specific details such as dates, names or numbers."
-  },
-  {
-    q: "What is the main message of the story?",
-    options: ["Long texts are impossible.", "Students should always translate everything.", "Good reading strategies make reading easier.", "Vocabulary is the only important skill."],
-    answer: 2,
-    exp: "Correct. The story shows that smart strategies make long texts easier."
-  }
-];
-
-let current = 0;
-let checked = false;
-let score = 0;
-
+const questions = [{"type": "mc", "q": "Why did Mark feel nervous at the beginning of the test?", "options": ["He arrived late.", "The reading test looked much longer than usual.", "He forgot his dictionary.", "Mrs. Green was angry."], "answer": 1, "exp": "Mark saw three texts, many questions and only sixty minutes."}, {"type": "mc", "q": "What was the title of the first article?", "options": ["The Secret Life of Bees", "The History of Flowers", "How to Pass English Tests", "The Life of Daniel"], "answer": 0, "exp": "The article was called “The Secret Life of Bees”."}, {"type": "mc", "q": "Which words helped Mark predict the topic?", "options": ["football, results, business", "flowers, honey, communication, environment", "school, homework, grades", "teacher, classroom, exam"], "answer": 1, "exp": "These words pointed to bees and their importance."}, {"type": "mc", "q": "What is skimming in this story?", "options": ["Reading quickly to understand the general topic", "Looking for one exact number", "Translating every word", "Skipping all questions"], "answer": 0, "exp": "Skimming is reading quickly for the main idea."}, {"type": "mc", "q": "What did Mark scan for in the bee article?", "options": ["A person’s name", "A colour", "A number", "A place"], "answer": 2, "exp": "He needed a number: how far a bee can travel."}, {"type": "mc", "q": "How far can a bee travel in one day?", "options": ["One kilometre", "Five kilometres", "Ten kilometres", "Twenty kilometres"], "answer": 2, "exp": "The text says up to ten kilometres."}, {"type": "mc", "q": "What mistake did Daniel make?", "options": ["He answered too quickly.", "He translated almost every word.", "He ignored all questions.", "He forgot to write his name."], "answer": 1, "exp": "Daniel translated nearly every word, which slowed him down."}, {"type": "mc", "q": "What did Mrs. Green say good readers know how to do?", "options": ["Memorize every text", "Find information", "Avoid hard texts", "Write faster than others"], "answer": 1, "exp": "She said good readers know how to find information."}, {"type": "mc", "q": "When should Mark use scanning?", "options": ["When he needs the main idea", "When he needs specific details", "When he wants to read for fun", "When he writes a composition"], "answer": 1, "exp": "Scanning is for specific information."}, {"type": "mc", "q": "What is the main message of the story?", "options": ["Long texts are impossible.", "Students should translate everything.", "Good reading strategies make reading easier.", "Vocabulary is the only important skill."], "answer": 2, "exp": "The story shows that strategies make reading easier."}];
+let current = 0, checked = false, score = 0;
+function norm(s){return (s||"").toLowerCase().trim().replace(/[.,!?]/g,"");}
 function renderQuestion(){
-  checked = false;
-  document.getElementById("feedback").style.display = "none";
-  document.getElementById("nextBtn").style.display = "none";
-  document.getElementById("progress").textContent = "Question " + (current + 1) + " of " + questions.length;
-  document.getElementById("questionText").textContent = questions[current].q;
-  const options = document.getElementById("options");
-  options.innerHTML = "";
-  questions[current].options.forEach((opt, i) => {
-    const label = document.createElement("label");
-    label.className = "option";
-    label.innerHTML = `<input type="radio" name="answer" value="${i}"> ${opt}`;
-    options.appendChild(label);
-  });
+ checked=false;
+ document.getElementById("feedback").style.display="none";
+ document.getElementById("nextBtn").style.display="none";
+ const q=questions[current];
+ document.getElementById("progress").textContent="Question "+(current+1)+" of "+questions.length;
+ document.getElementById("questionText").textContent=q.q;
+ const area=document.getElementById("answerArea");
+ area.innerHTML="";
+ if(q.type==="mc"){
+   q.options.forEach((opt,i)=>{const label=document.createElement("label"); label.className="option"; label.innerHTML=`<input type="radio" name="answer" value="${i}"> ${opt}`; area.appendChild(label);});
+ } else if(q.type==="typed"){
+   area.innerHTML='<input type="text" id="typedAnswer" placeholder="Type your answer here">';
+ } else {
+   area.innerHTML='<textarea id="typedAnswer" placeholder="Write 1–2 sentences"></textarea>';
+ }
 }
-
 function checkAnswer(){
-  if(checked) return;
-  const selected = document.querySelector('input[name="answer"]:checked');
-  const fb = document.getElementById("feedback");
-  if(!selected){
-    fb.className = "feedback wrong";
-    fb.textContent = "Choose an answer first.";
-    fb.style.display = "block";
-    return;
-  }
-  checked = true;
-  const isCorrect = Number(selected.value) === questions[current].answer;
-  if(isCorrect){
-    score++;
-    fb.className = "feedback correct";
-    fb.textContent = "✅ " + questions[current].exp;
-  } else {
-    fb.className = "feedback wrong";
-    fb.textContent = "❌ Not quite. " + questions[current].exp;
-  }
-  fb.style.display = "block";
-  document.getElementById("nextBtn").style.display = "inline-block";
+ if(checked)return;
+ const q=questions[current], fb=document.getElementById("feedback");
+ let ok=false;
+ if(q.type==="mc"){
+   const selected=document.querySelector('input[name="answer"]:checked');
+   if(!selected){fb.className="feedback wrong";fb.textContent="Choose an answer first.";fb.style.display="block";return;}
+   ok=Number(selected.value)===q.answer;
+ } else if(q.type==="typed"){
+   const value=norm(document.getElementById("typedAnswer").value);
+   ok=q.answers.some(a=>value.includes(norm(a)));
+   if(!value){fb.className="feedback wrong";fb.textContent="Type your answer first.";fb.style.display="block";return;}
+ } else {
+   const value=norm(document.getElementById("typedAnswer").value);
+   ok=q.keywords.filter(k=>value.includes(norm(k))).length>=2;
+   if(!value){fb.className="feedback wrong";fb.textContent="Type your answer first.";fb.style.display="block";return;}
+ }
+ checked=true;
+ if(ok){score++;fb.className="feedback correct";fb.textContent="✅ Correct. "+q.exp;}
+ else{fb.className="feedback wrong";fb.textContent="❌ Not quite. "+q.exp;}
+ fb.style.display="block";document.getElementById("nextBtn").style.display="inline-block";
 }
-
 function nextQuestion(){
-  current++;
-  if(current >= questions.length){
-    document.querySelector(".quiz-card").innerHTML = `<div class="score" style="display:block">Your score: ${score} / ${questions.length} (${Math.round(score/questions.length*100)}%).<br>${score >= 8 ? "Excellent! Continue to the next section." : "Listen again and try once more."}</div><button onclick="location.reload()">Try again</button>`;
-  } else {
-    renderQuestion();
-  }
+ current++;
+ if(current>=questions.length){
+  document.querySelector(".quiz-card").innerHTML=`<div class="score" style="display:block">Your score: ${score} / ${questions.length} (${Math.round(score/questions.length*100)}%).<br>${score/questions.length>=0.8?"Excellent!":"Listen again and try once more."}</div><button onclick="location.reload()">Try again</button>`;
+ } else renderQuestion();
 }
-
 renderQuestion();
 </script>
-</body>
-</html>
+</body></html>
