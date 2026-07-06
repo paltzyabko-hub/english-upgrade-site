@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>U1-010 — Speaking Lab</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="unit-header">
+  <nav><div class="logo">English Upgrade</div><a href="index.html">Unit 1</a></nav>
+</header>
+<main class="container">
+  <p class="badge-dark">U1-010</p>
+  <h1>Speaking Lab</h1>
+  <p>Practise speaking with prompts and AI support.</p>
+  <section class="resource-list">
+    <div class="resource"><h3>🎥 Video Lesson</h3><p>Placeholder for the video lesson.</p></div>
+    <div class="resource"><h3>🎧 Audio</h3><p>Placeholder for audio practice.</p></div>
+    <div class="resource"><h3>📚 Vocabulary Trainer</h3><p>Placeholder for flashcards and word games.</p></div>
+    <div class="resource"><h3>✅ Check Answers</h3><p>Placeholder for answer checking.</p></div>
+    <div class="resource"><h3>🤖 AI Coach</h3><p>Prompt-based speaking or writing practice.</p></div>
+  </section>
+  <div class="placeholder">
+    <strong>Future content:</strong> This page will be connected to the QR codes in the workbook.
+  </div>
+</main>
+</body>
+</html>
