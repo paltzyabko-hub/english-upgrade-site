@@ -7,11 +7,15 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f9ff;color:#10233d;line-height:1.55}
 a{text-decoration:none;color:inherit}
-.top{background:#06245c;color:white;padding:16px 5vw;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.top{background:#06245c;color:white;padding:12px 5vw;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .logo{font-size:24px;font-weight:900}
-.page-title{text-align:center;font-weight:900}
-.navbtn{background:white;color:#06245c;border-radius:12px;padding:10px 18px;font-weight:900}
-.hero{background:#eaf6ff;border:2px solid #b9dcff;border-radius:18px;margin:22px auto;max-width:1180px;padding:20px 24px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.top-links{display:flex;gap:10px;flex-wrap:wrap}
+.top-links a{background:white;color:#06245c;border-radius:12px;padding:9px 14px;font-weight:900}
+.breadcrumb{max-width:1180px;margin:16px auto 0;padding:0 24px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:#526174;font-weight:900}
+.breadcrumb a{background:white;border:2px solid #dcecf8;border-radius:999px;padding:8px 12px}
+.breadcrumb span{color:#8da0b4}
+.hero{background:#eaf6ff;border:2px solid #b9dcff;border-radius:18px;margin:18px auto 22px;max-width:1180px;padding:20px 24px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.pill{display:inline-block;background:#06245c;color:white;padding:8px 13px;border-radius:999px;font-weight:800;margin:0 8px 10px 0}
 .goal{font-size:18px} .goal b{color:#06245c}
 main{max-width:1180px;margin:auto;padding:0 24px 30px}
 .layout{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start}
@@ -20,11 +24,10 @@ h2{margin-top:0;color:#1266d6;font-size:28px}
 .reading-title{font-size:28px;color:#000;margin:12px 0 20px}
 .transcript-full p{font-size:19px;line-height:1.65;margin:0 0 18px}
 .tip{background:#fff8df;border:2px solid #ffe39a;border-radius:16px;padding:15px;font-size:18px;margin-top:22px}
-.audio-character{display:grid;grid-template-columns:1fr 190px;gap:18px;align-items:center}
-.boy-wrap{position:relative;text-align:center;min-height:240px}
-.boy-bg{position:absolute;inset:18px 22px 0 22px;background:#dff1ff;border-radius:45% 45% 35% 35%;z-index:0}
-.boy{position:relative;z-index:1;width:170px;margin-top:10px}
-.speech{position:absolute;right:0;top:24px;z-index:2;background:white;border:3px solid #2d75d4;border-radius:18px;padding:12px;font-weight:800;max-width:155px;box-shadow:0 8px 18px rgba(0,0,0,.08)}
+.audio-hero{height:360px;border-radius:24px;background:url('../assets/characters/mark-haifa.webp') center/cover no-repeat;position:relative;overflow:hidden;margin-bottom:18px;box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.audio-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,36,92,.58),rgba(6,36,92,.05) 55%)}
+.audio-hero-title{position:absolute;left:20px;bottom:18px;right:20px;z-index:2;color:white;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.audio-hero-title b{font-size:24px;display:block}
 .player{background:#fbfdff;border:2px solid #e3f0fb;border-radius:22px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.07)}
 audio{width:100%;margin:8px 0 12px}
 .btn,button{display:inline-block;border:0;border-radius:14px;padding:12px 16px;font-weight:900;background:#06245c;color:white;margin:8px 8px 0 0;cursor:pointer}
@@ -42,21 +45,39 @@ input[type=text], textarea{width:100%;border:2px solid #e3f0fb;border-radius:14p
 .wrong{color:#b00020;background:#fff2f2;border:2px solid #ffd1d1}
 .info{color:#5b3b00;background:#fff8df;border:2px solid #ffe39a}
 .score{font-size:22px;font-weight:900;background:#fff8df;border:2px solid #ffe39a;border-radius:18px;padding:16px;margin-top:18px;display:none}
-.bottom-nav{position:sticky;bottom:0;background:white;border:1px solid #dcecf8;border-radius:22px 22px 0 0;box-shadow:0 -8px 25px rgba(0,0,0,.07);max-width:1180px;margin:28px auto 0;display:grid;grid-template-columns:repeat(5,1fr);overflow:hidden}
+.bottom-nav{position:sticky;bottom:0;background:white;border:1px solid #dcecf8;border-radius:22px 22px 0 0;box-shadow:0 -8px 25px rgba(0,0,0,.07);max-width:1180px;margin:28px auto 0;display:grid;grid-template-columns:repeat(6,1fr);overflow:hidden}
 .bottom-nav a{padding:16px;text-align:center;font-weight:900;color:#526174}
 .bottom-nav a.active{background:#eaf3ff;color:#1266d6}
-@media(max-width:900px){.layout,.audio-character{grid-template-columns:1fr}.speech{position:relative;right:auto;top:auto;margin:8px auto}.bottom-nav{grid-template-columns:1fr 1fr}.top{flex-wrap:wrap}}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.bottom-nav{grid-template-columns:1fr 1fr}.hero{display:block}.audio-hero{height:300px}}
 </style>
 </head>
 <body>
 <header class="top">
-  <div class="logo">☰ English Upgrade • Unit 1</div>
-  <div class="page-title">Page 002<br>Reading + Audio</div>
-  <a class="navbtn" href="page002.html">← Back</a>
+  <a class="logo" href="../index.html">🏠 English Upgrade</a>
+  <div class="top-links">
+    <a href="../index.html">Main Menu</a>
+    <a href="index.html">Unit 1</a>
+    <a href="page002.html">Page 2</a>
+    <a href="page002-reading.html">Reading + Audio</a>
+  </div>
 </header>
 
+<div class="breadcrumb">
+  <a href="../index.html">🏠 Main Menu</a><span>›</span>
+  <a href="index.html">Unit 1</a><span>›</span>
+  <a href="page002.html">Page 2</a><span>›</span>
+  <a href="page002-reading.html">Reading + Audio</a>
+</div>
+
 <section class="hero">
-  <div class="goal">🎯 <b>YOUR GOAL:</b><br>Understand main ideas, details, and the author's purpose.<br>Learn how to read smarter, not harder.</div>
+  <div class="goal">
+    <a class="pill" href="index.html">UNIT 1</a>
+    <a class="pill" href="page002.html">PAGE 2</a>
+    <a class="pill" href="page002-reading.html">READING + AUDIO</a>
+    <br>🎯 <b>YOUR GOAL:</b><br>
+    Understand main ideas, details, and the author's purpose.<br>
+    Learn how to read smarter, not harder.
+  </div>
   <a class="btn light" href="../assets/downloads/U1-002_Reading_Audio_Transcript.pdf" download>⬇ Download Transcript (PDF)</a>
 </section>
 
@@ -73,26 +94,20 @@ input[type=text], textarea{width:100%;border:2px solid #e3f0fb;border-radius:14p
       <section class="panel">
         <h2>🔊 Audio</h2>
         <p>Listen to Mark read the text.</p>
-        <div class="audio-character">
-          <div class="boy-wrap">
-            <div class="boy-bg"></div>
-            <div class="speech">Hi! I'm Mark.<br>Listen to me read the story.</div>
-            <svg class="boy" viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg" aria-label="Mark character">
-              <circle cx="110" cy="88" r="58" fill="#f0b27a"/>
-              <path d="M55 82 C60 22,160 10,170 78 C145 55,105 45,72 75 Z" fill="#5a2e18"/>
-              <path d="M65 70 C85 25,140 25,165 65 C140 44,95 50,65 70 Z" fill="#3b1f12"/>
-              <circle cx="88" cy="92" r="8" fill="#2b1b14"/><circle cx="134" cy="92" r="8" fill="#2b1b14"/>
-              <path d="M82 128 Q110 150 140 128" fill="none" stroke="#7b2d22" stroke-width="6" stroke-linecap="round"/>
-              <path d="M55 155 Q110 210 165 155 L188 260 H32 Z" fill="#1664b5"/>
-              <path d="M78 162 L110 205 L142 162" fill="#ffffff"/>
-              <path d="M65 170 L50 260 M155 170 L170 260" stroke="#0a3c78" stroke-width="8" stroke-linecap="round"/>
-              <circle cx="72" cy="98" r="5" fill="#e58c69"/><circle cx="148" cy="98" r="5" fill="#e58c69"/>
-            </svg>
+
+        <div class="audio-hero">
+          <div class="audio-hero-title">
+            <b>Mark reads the story</b>
+            Bright Haifa view • friendly study mood
           </div>
         </div>
+
         <div class="player">
           <b>Mark reads the story</b>
-          <audio controls><source src="../assets/audio/u1-002-listening.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+          <audio controls>
+            <source src="../assets/audio/u1-002-listening.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
           <a class="btn light" href="../assets/audio/u1-002-listening.mp3" download>⬇ Download MP3</a>
         </div>
       </section>
@@ -125,18 +140,21 @@ input[type=text], textarea{width:100%;border:2px solid #e3f0fb;border-radius:14p
 </main>
 
 <nav class="bottom-nav">
+  <a href="../index.html">🏠 Home</a>
+  <a href="page002.html">📄 Page Menu</a>
   <a href="page002-video.html">▶ Video</a>
   <a class="active" href="page002-reading.html">📖 Reading + Audio</a>
   <a href="#">Aa Vocabulary</a>
-  <a href="#">✎ Grammar</a>
-  <a href="#">🤖 AI Practice</a>
+  <a href="#">🤖 AI</a>
 </nav>
 
 <script>
 const questions = [{"type": "mc", "q": "Why did Mark feel nervous at the beginning of the test?", "options": ["He arrived late.", "The reading test looked much longer than usual.", "He forgot his dictionary.", "Mrs. Green was angry."], "answer": 1, "exp": "Mark saw three texts, many questions and only sixty minutes."}, {"type": "mc", "q": "What was the title of the first article?", "options": ["The Secret Life of Bees", "The History of Flowers", "How to Pass English Tests", "The Life of Daniel"], "answer": 0, "exp": "The article was called “The Secret Life of Bees”."}, {"type": "mc", "q": "Which words helped Mark predict the topic?", "options": ["football, results, business", "flowers, honey, communication, environment", "school, homework, grades", "teacher, classroom, exam"], "answer": 1, "exp": "These words pointed to bees and their importance."}, {"type": "mc", "q": "What is skimming in this story?", "options": ["Reading quickly to understand the general topic", "Looking for one exact number", "Translating every word", "Skipping all questions"], "answer": 0, "exp": "Skimming is reading quickly for the main idea."}, {"type": "mc", "q": "What did Mark scan for in the bee article?", "options": ["A person’s name", "A colour", "A number", "A place"], "answer": 2, "exp": "He needed a number: how far a bee can travel."}, {"type": "mc", "q": "How far can a bee travel in one day?", "options": ["One kilometre", "Five kilometres", "Ten kilometres", "Twenty kilometres"], "answer": 2, "exp": "The text says up to ten kilometres."}, {"type": "mc", "q": "What mistake did Daniel make?", "options": ["He answered too quickly.", "He translated almost every word.", "He ignored all questions.", "He forgot to write his name."], "answer": 1, "exp": "Daniel translated nearly every word, which slowed him down."}, {"type": "mc", "q": "What did Mrs. Green say good readers know how to do?", "options": ["Memorize every text", "Find information", "Avoid hard texts", "Write faster than others"], "answer": 1, "exp": "She said good readers know how to find information."}, {"type": "mc", "q": "When should Mark use scanning?", "options": ["When he needs the main idea", "When he needs specific details", "When he wants to read for fun", "When he writes a composition"], "answer": 1, "exp": "Scanning is for specific information."}, {"type": "mc", "q": "What is the main message of the story?", "options": ["Long texts are impossible.", "Students should translate everything.", "Good reading strategies make reading easier.", "Vocabulary is the only important skill."], "answer": 2, "exp": "The story shows that strategies make reading easier."}, {"type": "mc", "q": "True or False: Mark had only thirty minutes to finish the test.", "options": ["True", "False"], "answer": 1, "exp": "He had sixty minutes."}, {"type": "mc", "q": "True or False: Mark used skimming before reading the whole article.", "options": ["True", "False"], "answer": 0, "exp": "He looked at the title, pictures and headings first."}, {"type": "mc", "q": "True or False: Scanning helped Mark find a number in the article.", "options": ["True", "False"], "answer": 0, "exp": "He scanned for how far a bee can travel."}, {"type": "mc", "q": "True or False: Daniel finished faster because he translated every word.", "options": ["True", "False"], "answer": 1, "exp": "Translating every word made him slower."}, {"type": "mc", "q": "True or False: By the end of the month, Mark felt more confident.", "options": ["True", "False"], "answer": 0, "exp": "The story says he felt much more confident."}, {"type": "typed", "q": "What animal was the first article about?", "answers": ["bee", "bees"], "exp": "The article was about bees."}, {"type": "typed", "q": "Write one word from the article that helped Mark predict the topic.", "answers": ["flowers", "honey", "communication", "environment"], "exp": "Any of these words is accepted."}, {"type": "typed", "q": "What reading strategy means finding specific details?", "answers": ["scanning", "scan"], "exp": "Scanning means looking for specific information."}, {"type": "typed", "q": "What reading strategy means understanding the main idea quickly?", "answers": ["skimming", "skim"], "exp": "Skimming means reading quickly for the main idea."}, {"type": "main", "q": "What is the main lesson of the story?", "keywords": ["skim", "scan", "strategy", "strategies", "read", "reading", "smart"], "exp": "A good answer mentions reading smartly and using skimming/scanning strategies."}];
 let current = 0;
 let state = questions.map(() => ({status:"new", attempts:0, answer:""}));
+
 function norm(s){return (s||"").toLowerCase().trim().replace(/[.,!?]/g,"");}
+
 function renderQuestion(){
  const q=questions[current], st=state[current];
  document.getElementById("feedback").style.display="none";
@@ -165,12 +183,14 @@ function renderQuestion(){
    fb.style.display="block";
  }
 }
+
 function updateStats(){
  const correct=state.filter(s=>s.status==="correct").length;
  const skipped=state.filter(s=>s.status==="skipped").length;
  const tried=state.filter(s=>s.status==="wrong").length;
  document.getElementById("stats").textContent="✅ Correct: "+correct+"  ⏭ Skipped: "+skipped+"  🔁 Try again: "+tried;
 }
+
 function getAnswer(){
  const q=questions[current];
  if(q.type==="mc"){
@@ -180,6 +200,7 @@ function getAnswer(){
  const box=document.getElementById("typedAnswer");
  return box ? box.value : "";
 }
+
 function checkAnswer(){
  const q=questions[current], st=state[current], fb=document.getElementById("feedback");
  const ans=getAnswer();
@@ -205,17 +226,20 @@ function checkAnswer(){
  }
  fb.style.display="block"; updateStats();
 }
+
 function nextQuestion(){
  const ans=getAnswer();
  if(ans) state[current].answer=ans;
  if(!ans && state[current].status==="new") state[current].status="skipped";
  if(current < questions.length-1){ current++; renderQuestion(); } else finishQuiz();
 }
+
 function prevQuestion(){
  const ans=getAnswer();
  if(ans) state[current].answer=ans;
  if(current>0){ current--; renderQuestion(); }
 }
+
 function finishQuiz(){
  const correct=state.filter(s=>s.status==="correct").length;
  const skipped=state.filter(s=>s.status==="skipped" || s.status==="new").length;
