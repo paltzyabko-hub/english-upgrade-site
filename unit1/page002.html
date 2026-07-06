@@ -1,79 +1,108 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>U1-002 — Reading Strategy #1</title>
-  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f9ff;color:#10233d;line-height:1.55}
+    a{text-decoration:none;color:inherit}
+    .top{background:#06245c;color:white;padding:18px 7vw;font-size:25px;font-weight:900}
+    .hero{background:linear-gradient(135deg,#06245c,#0e8fca 55%,#16b89e);color:white;padding:42px 7vw}
+    .pill{display:inline-block;background:rgba(255,255,255,.18);padding:8px 13px;border-radius:999px;font-weight:800;margin:0 8px 10px 0}
+    .hero h1{font-size:48px;margin:10px 0 8px;line-height:1.05}
+    .hero p{font-size:20px;max-width:790px}
+    main{max-width:1180px;margin:auto;padding:30px 7vw}
+    section{background:white;border-radius:26px;padding:26px;box-shadow:0 10px 30px rgba(2,32,75,.10);border:1px solid #dcecf8;margin-bottom:22px}
+    h2{margin-top:0;color:#06245c;font-size:30px}
+    h3{color:#06245c}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .video-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:22px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.15);background:#000}
+    .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .card{background:#fbfdff;border:2px solid #e3f0fb;border-radius:22px;padding:20px}
+    .btn{display:inline-block;border-radius:14px;padding:12px 16px;font-weight:900;background:#06245c;color:white;margin:8px 8px 0 0}
+    .btn.light{background:#eef8ff;color:#06245c;border:2px solid #cceeff}
+    .notes-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .note{background:#f7fbff;border-left:7px solid #10a7a7;border-radius:16px;padding:14px}
+    table{width:100%;border-collapse:collapse}
+    th,td{border-bottom:1px solid #dcecf8;padding:10px;text-align:left}
+    th{color:#06245c}
+    .nav{display:flex;justify-content:space-between;margin-top:24px}
+    .small-link{background:white;border:2px solid #dcecf8;border-radius:14px;padding:12px 16px;font-weight:800}
+    @media(max-width:850px){.two,.notes-grid{grid-template-columns:1fr}.hero h1{font-size:36px}main{padding:22px 5vw}}
+  </style>
 </head>
 <body>
-<header class="unit-header">
-  <nav><div class="logo">English Upgrade</div><a href="index.html">Unit 1</a></nav>
-</header>
+  <div class="top">English Upgrade</div>
 
-<section class="hero">
-  <div class="pills"><span class="pill">UNIT 1</span><span class="pill">PAGE 2</span><span class="pill">Video Lesson</span></div>
-  <h1>Reading Strategy #1</h1>
-  <p>Skimming and scanning: read faster, find information, and answer with confidence.</p>
-</section>
+  <header class="hero">
+    <span class="pill">UNIT 1</span>
+    <span class="pill">PAGE 2</span>
+    <span class="pill">Video Lesson</span>
+    <h1>Reading Strategy #1</h1>
+    <p>Skimming and scanning: read faster, find information, and answer with confidence.</p>
+  </header>
 
-<main class="wrap">
-  <section class="panel">
-    <h2>🎥 Video Lesson</h2>
-    <div class="two">
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/mbsAtyoNIpU" title="How to use Skimming and Scanning in Reading" allowfullscreen></iframe>
+  <main>
+    <section>
+      <h2>🎥 Video Lesson</h2>
+      <div class="two">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/mbsAtyoNIpU" title="How to use Skimming and Scanning in Reading" allowfullscreen></iframe>
+        </div>
+        <div class="card">
+          <h3>Watch this first</h3>
+          <p>This video explains two important reading strategies:</p>
+          <ul>
+            <li><b>Skimming</b> — reading quickly to understand the main idea.</li>
+            <li><b>Scanning</b> — looking for specific information such as names, dates or numbers.</li>
+          </ul>
+          <a class="btn" href="https://www.youtube.com/watch?v=mbsAtyoNIpU" target="_blank">Watch on YouTube</a>
+          <a class="btn light" href="../assets/downloads/U1-002_Video_Notes.pdf" download>Download PDF notes</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Watch this first</h3>
-        <p>This video explains two important reading strategies:</p>
-        <ul>
-          <li><b>Skimming</b> — reading quickly to understand the main idea.</li>
-          <li><b>Scanning</b> — looking for specific information such as names, dates or numbers.</li>
-        </ul>
-        <a class="btn" href="https://www.youtube.com/watch?v=mbsAtyoNIpU" target="_blank">Watch on YouTube</a>
-        <a class="btn light" href="../assets/downloads/U1-002_Video_Notes.pdf" download>Download PDF notes</a>
+    </section>
+
+    <section>
+      <h2>📖 Video Notes</h2>
+      <p><b>Learning goal:</b> Understand the difference between skimming and scanning and know when to use each strategy.</p>
+      <div class="notes-grid">
+        <div class="note">
+          <h3>Key Ideas</h3>
+          <ol>
+            <li><b>Skimming</b> means reading quickly to understand the main idea.</li>
+            <li><b>Scanning</b> means looking for specific information such as names, dates, numbers or keywords.</li>
+            <li>Read the title and headings before reading the whole text.</li>
+            <li>Do not translate every word. Focus on meaning.</li>
+            <li>Return to the text when you need evidence for an answer.</li>
+          </ol>
+        </div>
+        <div class="note">
+          <h3>Challenge for Mark</h3>
+          <p>Before reading a new text, spend <b>30 seconds</b> looking only at the title and headings.</p>
+          <p>Then write one sentence:</p>
+          <p><i>“I think this text is about...”</i></p>
+        </div>
       </div>
+    </section>
+
+    <section>
+      <h2>📚 Useful Words from the Video</h2>
+      <table>
+        <tr><th>Word</th><th>Meaning</th></tr>
+        <tr><td>skim</td><td>read quickly for the main idea</td></tr>
+        <tr><td>scan</td><td>search for specific information</td></tr>
+        <tr><td>heading</td><td>title of a section</td></tr>
+        <tr><td>keyword</td><td>important word</td></tr>
+        <tr><td>evidence</td><td>information proving an answer</td></tr>
+      </table>
+    </section>
+
+    <div class="nav">
+      <a class="small-link" href="page001.html">← U1-001</a>
+      <a class="small-link" href="page003.html">U1-003 →</a>
     </div>
-  </section>
-
-  <section class="panel">
-    <h2>📖 Video Notes</h2>
-    <p><b>Learning goal:</b> Understand the difference between skimming and scanning and know when to use each strategy.</p>
-
-    <div class="notes-grid">
-      <div class="note">
-        <h3>Key Ideas</h3>
-        <ol>
-          <li><b>Skimming</b> means reading quickly to understand the main idea.</li>
-          <li><b>Scanning</b> means looking for specific information such as names, dates, numbers or keywords.</li>
-          <li>Read the title and headings before reading the whole text.</li>
-          <li>Do not translate every word. Focus on meaning.</li>
-          <li>Return to the text when you need evidence for an answer.</li>
-        </ol>
-      </div>
-
-      <div class="note">
-        <h3>Challenge for Mark</h3>
-        <p>Before reading a new text, spend <b>30 seconds</b> looking only at the title and headings.</p>
-        <p>Then write one sentence:</p>
-        <p><i>“I think this text is about...”</i></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel">
-    <h2>📚 Useful Words from the Video</h2>
-    <table class="word-table">
-      <tr><th>Word</th><th>Meaning</th></tr>
-      <tr><td>skim</td><td>read quickly for the main idea</td></tr>
-      <tr><td>scan</td><td>search for specific information</td></tr>
-      <tr><td>heading</td><td>title of a section</td></tr>
-      <tr><td>keyword</td><td>important word</td></tr>
-      <tr><td>evidence</td><td>information proving an answer</td></tr>
-    </table>
-  </section>
-
-  <div class="footer-nav"><a class="small-link" href="page001.html">← U1-001</a><a class="small-link" href="page003.html">U1-003 →</a></div>
-</main>
+  </main>
 </body>
 </html>
