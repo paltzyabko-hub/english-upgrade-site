@@ -1,41 +1,144 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>U1-002 Menu</title><style>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U1-002 — Page Menu</title>
+<style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f9ff;color:#10233d;line-height:1.55}
-a{text-decoration:none;color:inherit}.top{background:#06245c;color:white;padding:12px 5vw;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.logo{font-size:24px;font-weight:900}.top-links{display:flex;gap:10px;flex-wrap:wrap}.top-links a,.navbtn{background:white;color:#06245c;border-radius:12px;padding:9px 14px;font-weight:900}
+a{text-decoration:none;color:inherit}
+.top{background:#06245c;color:white;padding:12px 5vw;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.logo{font-size:24px;font-weight:900}
+.top-links{display:flex;gap:10px;flex-wrap:wrap}
+.top-links a{background:white;color:#06245c;border-radius:12px;padding:9px 14px;font-weight:900}
 .breadcrumb{max-width:1180px;margin:16px auto 0;padding:0 24px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:#526174;font-weight:900}
-.breadcrumb a{background:white;border:2px solid #dcecf8;border-radius:999px;padding:8px 12px}.breadcrumb span{color:#8da0b4}
-.hero{background:#eaf6ff;border:2px solid #b9dcff;border-radius:18px;margin:18px auto 22px;max-width:1180px;padding:20px 24px;display:flex;justify-content:space-between;gap:20px;align-items:center}
-.pill{display:inline-block;background:#06245c;color:white;padding:8px 13px;border-radius:999px;font-weight:800;margin:0 8px 10px 0}
-.pill.light{background:white;color:#06245c;border:2px solid #cceeff}
-.goal{font-size:18px}.goal b{color:#06245c}main{max-width:1180px;margin:auto;padding:0 24px 30px}
-.layout{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start}.panel{background:white;border-radius:22px;padding:24px;box-shadow:0 10px 30px rgba(2,32,75,.08);border:1px solid #dcecf8;margin-bottom:22px}
-h2{margin-top:0;color:#1266d6;font-size:28px}.reading-title{font-size:28px;color:#000;margin:12px 0 20px}.transcript-full p{font-size:19px;line-height:1.65;margin:0 0 18px}
-.tip{background:#fff8df;border:2px solid #ffe39a;border-radius:16px;padding:15px;font-size:18px;margin-top:22px}.audio-character{display:grid;grid-template-columns:1fr 190px;gap:18px;align-items:center}
-.boy-wrap{position:relative;text-align:center;min-height:240px}.boy-bg{position:absolute;inset:18px 22px 0 22px;background:#dff1ff;border-radius:45% 45% 35% 35%;z-index:0}.boy{position:relative;z-index:1;width:170px;margin-top:10px}
-.speech{position:absolute;right:0;top:24px;z-index:2;background:white;border:3px solid #2d75d4;border-radius:18px;padding:12px;font-weight:800;max-width:155px;box-shadow:0 8px 18px rgba(0,0,0,.08)}
-.player{background:#fbfdff;border:2px solid #e3f0fb;border-radius:22px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.07)}audio{width:100%;margin:8px 0 12px}
-.btn,button{display:inline-block;border:0;border-radius:14px;padding:12px 16px;font-weight:900;background:#06245c;color:white;margin:8px 8px 0 0;cursor:pointer}.btn.light,button.light{background:#eef8ff;color:#06245c;border:2px solid #cceeff}.btn.orange,button.orange{background:#ff8b2b}.tips{background:#eef8ff;border:2px solid #b9dcff}.tips li{margin:8px 0}
-.quiz-card{background:#fbfdff;border:2px solid #e3f0fb;border-radius:24px;padding:24px}.progress{font-weight:900;color:#06245c;margin-bottom:12px;display:flex;gap:12px;flex-wrap:wrap}.option{display:block;background:white;border:2px solid #e3f0fb;border-radius:14px;padding:12px;margin:10px 0;cursor:pointer}.option:hover{border-color:#10a7a7}
-input[type=text],textarea{width:100%;border:2px solid #e3f0fb;border-radius:14px;padding:12px;font:inherit;margin:8px 0}.feedback{font-weight:900;margin-top:14px;padding:12px;border-radius:14px;display:none}.correct{color:#0b7a3b;background:#eafaf2;border:2px solid #bdeed1}.wrong{color:#b00020;background:#fff2f2;border:2px solid #ffd1d1}.info{color:#5b3b00;background:#fff8df;border:2px solid #ffe39a}.score{font-size:22px;font-weight:900;background:#fff8df;border:2px solid #ffe39a;border-radius:18px;padding:16px;margin-top:18px;display:none}
-.bottom-nav{position:sticky;bottom:0;background:white;border:1px solid #dcecf8;border-radius:22px 22px 0 0;box-shadow:0 -8px 25px rgba(0,0,0,.07);max-width:1180px;margin:28px auto 0;display:grid;grid-template-columns:repeat(6,1fr);overflow:hidden}.bottom-nav a{padding:16px;text-align:center;font-weight:900;color:#526174}.bottom-nav a.active{background:#eaf3ff;color:#1266d6}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}.tile{display:block;background:#fff;border:2px solid #dcecf8;border-radius:24px;padding:24px;box-shadow:0 8px 22px rgba(0,0,0,.08)}.tile strong{display:block;font-size:24px;color:#06245c;margin-bottom:8px}
-@media(max-width:900px){.layout,.audio-character{grid-template-columns:1fr}.speech{position:relative;right:auto;top:auto;margin:8px auto}.bottom-nav{grid-template-columns:1fr 1fr}.top{align-items:flex-start}.hero{display:block}}
-</style></head><body>
+.breadcrumb a{background:white;border:2px solid #dcecf8;border-radius:999px;padding:8px 12px}
+.breadcrumb span{color:#8da0b4}
+main{max-width:1180px;margin:auto;padding:20px 24px 40px}
+.hero{background:linear-gradient(135deg,#06245c,#0e8fca);color:white;border-radius:26px;padding:32px;margin-bottom:24px}
+.pill{display:inline-block;background:rgba(255,255,255,.18);padding:8px 13px;border-radius:999px;font-weight:800;margin:0 8px 10px 0}
+.hero h1{font-size:44px;margin:8px 0}
+.book-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+.book-page{background:white;border-radius:26px;padding:34px;box-shadow:0 16px 38px rgba(2,32,75,.16);border:1px solid #dcecf8;position:relative;overflow:hidden}
+.book-page:before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;background:linear-gradient(#0e8fca,#06245c)}
+.book-title{color:#06245c;font-size:38px;margin:0 0 10px}
+.subtitle{font-size:20px;color:#0e6687;font-weight:900;margin-bottom:24px}
+.goal{background:#eaf6ff;border:2px solid #b9dcff;border-radius:18px;padding:18px;margin:20px 0}
+.text-block{font-size:21px;line-height:1.7}
+.highlight{background:#fff8df;border-left:7px solid #ffb32c;border-radius:14px;padding:15px;margin:20px 0;font-size:19px}
+.strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+.strategy{background:#f7fbff;border:2px solid #dcecf8;border-radius:18px;padding:18px}
+.strategy h3{margin:0 0 8px;color:#1266d6}
+.side{display:flex;flex-direction:column;gap:18px}
+.card{background:white;border-radius:24px;padding:22px;box-shadow:0 10px 28px rgba(2,32,75,.10);border:1px solid #dcecf8}
+.card h2{margin-top:0;color:#06245c}
+.resource-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.resource{display:block;border:2px solid #dcecf8;border-radius:18px;padding:18px;background:#fbfdff;font-weight:900;font-size:18px}
+.resource:hover{border-color:#0e8fca;background:#eefcff}
+.mission li{margin:9px 0;font-size:18px}
+.progress{height:18px;background:#e3f0fb;border-radius:999px;overflow:hidden}
+.progress span{display:block;width:40%;height:100%;background:linear-gradient(90deg,#0e8fca,#1266d6)}
+.bottom{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
+.btn{display:inline-block;background:#06245c;color:white;border-radius:14px;padding:12px 16px;font-weight:900}
+.btn.light{background:white;color:#06245c;border:2px solid #dcecf8}
+.click-note{font-size:14px;color:#526174;margin-top:12px}
+@media(max-width:900px){.book-wrap{grid-template-columns:1fr}.hero h1{font-size:34px}.book-title{font-size:30px}.text-block{font-size:18px}.strategy-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
 <header class="top">
   <a class="logo" href="../index.html">🏠 English Upgrade</a>
   <div class="top-links">
     <a href="../index.html">Main Menu</a>
     <a href="index.html">Unit 1</a>
     <a href="page002.html">Page 2</a>
-    <a href="page002.html">Review Guide</a>
   </div>
 </header>
+
 <div class="breadcrumb">
   <a href="../index.html">🏠 Main Menu</a><span>›</span>
   <a href="index.html">Unit 1</a><span>›</span>
-  <a href="page002.html">Page 2</a><span>›</span>
-  <a href="page002.html">Current Section</a>
+  <a href="page002.html">Page 2</a>
 </div>
 
-<section class="hero"><div><a class="pill" href="index.html">UNIT 1</a><a class="pill" href="page002.html">PAGE 2</a><a class="pill" href="page002.html">REVIEW GUIDE</a><h1>Reading Strategy #1</h1><p>Choose a digital resource.</p></div></section><main><section class="panel"><h2>Choose a section</h2><div class="menu-grid"><a class="tile" href="page002-reading.html"><strong>📖🎧 Reading + Audio</strong>Listen, read and complete the quiz.</a><a class="tile" href="page002-video.html"><strong>🎥 Video</strong>Watch the lesson.</a><a class="tile" href="#"><strong>📚 Vocabulary</strong>Coming next.</a><a class="tile" href="#"><strong>🤖 AI Tutor</strong>Coming next.</a></div></section></main><nav class="bottom-nav"><a href="../index.html">🏠 Home</a><a class="active" href="page002.html">📄 Page Menu</a><a href="page002-video.html">▶ Video</a><a href="page002-reading.html">📖 Reading + Audio</a><a href="#">Aa Vocabulary</a><a href="#">🤖 AI</a></nav></body></html>
+<main>
+<section class="hero">
+  <span class="pill">UNIT 1</span>
+  <span class="pill">PAGE 2</span>
+  <span class="pill">REVIEW GUIDE</span>
+  <h1>Reading Strategy #1</h1>
+  <p>Open the digital workbook page, then choose a practice section.</p>
+</section>
+
+<div class="book-wrap">
+  <section class="book-page">
+    <h1 class="book-title">Reading Strategy #1</h1>
+    <div class="subtitle">Read Smart, Not Hard</div>
+
+    <div class="goal">
+      🎯 <b>Your goal:</b><br>
+      Learn how to understand long English texts without translating every word.
+    </div>
+
+    <div class="text-block">
+      <p>Good readers do not always read every word from the beginning to the end. First, they look at the title, pictures, headings and questions.</p>
+      <p>This helps them understand what the text is probably about before they read carefully.</p>
+    </div>
+
+    <div class="strategy-grid">
+      <a class="strategy" href="page002-reading.html">
+        <h3>📖 Skimming</h3>
+        <p>Read quickly to understand the main idea.</p>
+      </a>
+      <a class="strategy" href="page002-reading.html">
+        <h3>🔎 Scanning</h3>
+        <p>Look for specific information: names, dates, numbers and keywords.</p>
+      </a>
+    </div>
+
+    <div class="highlight">
+      💡 <b>Remember:</b> First understand the main idea. Then search for details.
+    </div>
+
+    <div class="text-block">
+      <p>On this page, Mark practises reading strategies and learns how to work with longer Bagrut-style texts more confidently.</p>
+    </div>
+
+    <div class="click-note">This digital page is readable on screen. Click the strategy blocks or use the menu on the right.</div>
+  </section>
+
+  <aside class="side">
+    <section class="card">
+      <h2>Choose a section</h2>
+      <div class="resource-grid">
+        <a class="resource" href="page002-video.html">🎥 Video Lesson</a>
+        <a class="resource" href="page002-reading.html">📖🎧 Reading + Audio</a>
+        <a class="resource" href="#">📚 Vocabulary — coming next</a>
+        <a class="resource" href="#">✍ Grammar — coming next</a>
+        <a class="resource" href="#">🤖 AI Practice — coming next</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Today's Mission</h2>
+      <ul class="mission">
+        <li>□ Read the page</li>
+        <li>□ Watch the video</li>
+        <li>□ Listen to Mark</li>
+        <li>□ Complete the quiz</li>
+        <li>□ Review vocabulary</li>
+      </ul>
+      <div class="progress"><span></span></div>
+    </section>
+  </aside>
+</div>
+
+<div class="bottom">
+  <a class="btn light" href="page001.html">← Previous Page</a>
+  <a class="btn" href="page002-reading.html">Start Reading + Audio</a>
+  <a class="btn light" href="page003.html">Next Page →</a>
+</div>
+</main>
+</body>
+</html>
