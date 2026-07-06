@@ -28,6 +28,8 @@
     table{width:100%;border-collapse:collapse}
     th,td{border-bottom:1px solid #dcecf8;padding:10px;text-align:left}
     th{color:#06245c}
+    audio{width:100%;margin:10px 0 14px}
+    .transcript{max-height:360px;overflow:auto;background:#fbfdff;border:2px solid #e3f0fb;border-radius:18px;padding:18px;white-space:pre-wrap}
     .question{background:#fbfdff;border:2px solid #e3f0fb;border-radius:20px;padding:18px;margin:14px 0}
     .question label{display:block;background:white;border:2px solid #e3f0fb;border-radius:12px;padding:10px;margin:8px 0;cursor:pointer}
     .feedback{font-weight:900;margin-top:10px}
@@ -44,7 +46,7 @@
   <header class="hero">
     <span class="pill">UNIT 1</span>
     <span class="pill">PAGE 2</span>
-    <span class="pill">Video Lesson</span>
+    <span class="pill">Reading Strategy</span>
     <h1>Reading Strategy #1</h1>
     <p>Skimming and scanning: read faster, find information, and answer with confidence.</p>
   </header>
@@ -67,6 +69,57 @@
           <a class="btn light" href="../assets/downloads/U1-002_Video_Notes.pdf" download>Download PDF notes</a>
         </div>
       </div>
+    </section>
+
+    <section>
+      <h2>🎧 Audio Listening</h2>
+      <div class="card">
+        <h3>Read Smart, Not Hard</h3>
+        <p>Listen to the story. Then read the transcript if needed.</p>
+        <audio controls>
+          <source src="../assets/audio/u1-002-listening.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <a class="btn" href="../assets/audio/u1-002-listening.mp3" download>Download MP3</a>
+        <a class="btn light" href="../assets/downloads/U1-002_Audio_Transcript.txt" download>Download transcript</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>📄 Audio Transcript</h2>
+      <div class="transcript">Mark had an English reading test on Friday morning. As soon as he entered the classroom, he noticed that the test looked much longer than usual. There were three texts, several pages of questions, and only sixty minutes to finish everything.
+
+At first, Mark felt nervous. He looked at the first article and thought, “There are too many words. I’ll never finish this on time.”
+
+His teacher, Mrs. Green, noticed the worried faces of many students. Before the test officially started, she smiled and said, “Remember what we practised this week. Good readers don’t begin by reading every single word. They read smart.”
+
+Those words helped Mark relax.
+
+He looked at the title of the first article: “The Secret Life of Bees.”
+
+Instead of reading the whole article immediately, he spent a few seconds looking at the title, the pictures and the headings. He noticed words like flowers, honey, communication and environment.
+
+“Okay,” he thought. “This article is probably about how bees live and why they are important.”
+
+Without reading every sentence, he already understood the general topic. That was skimming.
+
+Now Mark turned to the questions. One question asked, “How far can a bee travel in one day?”
+
+Mark smiled. He didn’t need to read the whole article again. He knew he was looking for a number.
+
+His eyes moved quickly across the page until he found the sentence: “A bee may travel up to ten kilometres during a single day while searching for flowers.”
+
+He wrote the answer and continued. That was scanning.
+
+For questions about facts, he used scanning. For questions about the main idea, he used skimming first and careful reading later.
+
+During the break, his friend Daniel admitted that he had translated almost every word.
+
+Mrs. Green explained that good readers know how to find information. They skim when they need the main idea and scan when they need specific details.
+
+By the end of the month, Mark was reading faster, understanding more and feeling much more confident.
+
+He realised that successful readers are not always the students with the biggest vocabulary. Very often, they are simply the students who know when to skim, when to scan, and when to read carefully.</div>
     </section>
 
     <section>
@@ -108,7 +161,7 @@
       <h2>🎯 Video Quiz</h2>
       <p>Choose the best answer. Click <b>Check</b> after each question.</p>
 
-      <div class="question" data-answer="b">
+      <div class="question">
         <h3>1. What is skimming?</h3>
         <label><input type="radio" name="q1" value="a"> Reading every word very slowly</label>
         <label><input type="radio" name="q1" value="b"> Reading quickly to understand the main idea</label>
@@ -117,7 +170,7 @@
         <div id="f1" class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="a">
+      <div class="question">
         <h3>2. What is scanning?</h3>
         <label><input type="radio" name="q2" value="a"> Looking for specific information</label>
         <label><input type="radio" name="q2" value="b"> Reading for pleasure</label>
@@ -126,57 +179,13 @@
         <div id="f2" class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="c">
-        <h3>3. When should you use skimming?</h3>
-        <label><input type="radio" name="q3" value="a"> When you need one date</label>
-        <label><input type="radio" name="q3" value="b"> When you want to copy a sentence</label>
-        <label><input type="radio" name="q3" value="c"> When you want to understand what the text is mainly about</label>
-        <button onclick="checkOne(3,'c','Correct! Skimming is useful before detailed reading.')">Check</button>
+      <div class="question">
+        <h3>3. A good reader does NOT need to...</h3>
+        <label><input type="radio" name="q3" value="a"> understand the main idea</label>
+        <label><input type="radio" name="q3" value="b"> find evidence</label>
+        <label><input type="radio" name="q3" value="c"> translate every word</label>
+        <button onclick="checkOne(3,'c','Correct! Translating every word is slow and often unnecessary.')">Check</button>
         <div id="f3" class="feedback"></div>
-      </div>
-
-      <div class="question" data-answer="b">
-        <h3>4. Which details are useful for scanning?</h3>
-        <label><input type="radio" name="q4" value="a"> The mood of the story</label>
-        <label><input type="radio" name="q4" value="b"> Names, dates, numbers and keywords</label>
-        <label><input type="radio" name="q4" value="c"> Every adjective in the text</label>
-        <button onclick="checkOne(4,'b','Correct! These details are easy to search for quickly.')">Check</button>
-        <div id="f4" class="feedback"></div>
-      </div>
-
-      <div class="question" data-answer="a">
-        <h3>5. Before reading a long text, it is useful to look at...</h3>
-        <label><input type="radio" name="q5" value="a"> the title and headings</label>
-        <label><input type="radio" name="q5" value="b"> only the last word</label>
-        <label><input type="radio" name="q5" value="c"> the dictionary first</label>
-        <button onclick="checkOne(5,'a','Correct! Titles and headings help you predict the topic.')">Check</button>
-        <div id="f5" class="feedback"></div>
-      </div>
-
-      <div class="question" data-answer="c">
-        <h3>6. A good reader does NOT need to...</h3>
-        <label><input type="radio" name="q6" value="a"> understand the main idea</label>
-        <label><input type="radio" name="q6" value="b"> find evidence</label>
-        <label><input type="radio" name="q6" value="c"> translate every word</label>
-        <button onclick="checkOne(6,'c','Correct! Translating every word is slow and often unnecessary.')">Check</button>
-        <div id="f6" class="feedback"></div>
-      </div>
-
-      <div class="question" data-answer="a">
-        <h3>7. True or False: Scanning can help you find a phone number in a text.</h3>
-        <label><input type="radio" name="q7" value="a"> True</label>
-        <label><input type="radio" name="q7" value="b"> False</label>
-        <button onclick="checkOne(7,'a','Correct! A phone number is specific information.')">Check</button>
-        <div id="f7" class="feedback"></div>
-      </div>
-
-      <div class="question" data-answer="b">
-        <h3>8. What should Mark do first with a new Bagrut text?</h3>
-        <label><input type="radio" name="q8" value="a"> Translate the first paragraph</label>
-        <label><input type="radio" name="q8" value="b"> Skim the page and predict the topic</label>
-        <label><input type="radio" name="q8" value="c"> Guess all answers immediately</label>
-        <button onclick="checkOne(8,'b','Correct! First get the general idea, then answer carefully.')">Check</button>
-        <div id="f8" class="feedback"></div>
       </div>
 
       <button class="btn" onclick="showScore()">Show total score</button>
@@ -206,15 +215,15 @@ function checkOne(num, correct, explanation){
   } else {
     results[num] = false;
     box.className = 'feedback wrong';
-    box.textContent = '❌ Not quite. Try again and think about the difference between skimming and scanning.';
+    box.textContent = '❌ Not quite. Try again.';
   }
 }
 function showScore(){
   let score = 0;
-  for(let i=1;i<=8;i++){ if(results[i]===true) score++; }
-  const percent = Math.round(score/8*100);
-  let msg = 'Score: ' + score + '/8 (' + percent + '%). ';
-  msg += percent >= 80 ? 'Excellent! Continue to Vocabulary.' : 'Watch the video again and try once more.';
+  for(let i=1;i<=3;i++){ if(results[i]===true) score++; }
+  const percent = Math.round(score/3*100);
+  let msg = 'Score: ' + score + '/3 (' + percent + '%). ';
+  msg += percent >= 80 ? 'Excellent!' : 'Watch the video again and try once more.';
   document.getElementById('score').textContent = msg;
 }
 </script>
