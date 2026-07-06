@@ -8,101 +8,67 @@
 </head>
 <body>
 <header class="unit-header">
-  <nav>
-    <div class="logo">English Upgrade</div>
-    <a href="index.html">Unit 1</a>
-  </nav>
+  <nav><div class="logo">English Upgrade</div><a href="index.html">Unit 1</a></nav>
 </header>
 
-<section class="lesson-hero">
-  <div class="topline">
-    <span class="pill">UNIT 1</span>
-    <span class="pill">PAGE 2</span>
-    <span class="pill">Reading Strategy</span>
-  </div>
-  <h1>Read Like a 5 Units Student</h1>
-  <p>Learn how to scan, think, connect ideas and answer Bagrut-style questions with confidence.</p>
+<section class="hero-mini">
+  <div class="pills"><span class="pill">UNIT 1</span><span class="pill">PAGE 2</span><span class="pill">QR Lesson</span></div>
+  <h1>Reading Strategy #1</h1>
+  <p><strong>Read Like a 5 Units Student:</strong> scan first, think actively, connect ideas, then answer with evidence.</p>
 </section>
 
-<main class="lesson-wrap">
-  <section class="lesson-grid">
-    <div class="panel">
+<main class="container">
+  <section class="two">
+    <div class="card">
       <h2>🎯 Today's Goal</h2>
-      <p>By the end of this online lesson, you will be able to use the <strong>SCAN → THINK → CONNECT → ANSWER</strong> strategy before and during reading.</p>
-      <ul class="goal-list">
-        <li>✅ Find the main idea faster.</li>
-        <li>✅ Stop translating every single word.</li>
-        <li>✅ Use the title, pictures and questions before reading.</li>
-        <li>✅ Support your answers with evidence from the text.</li>
+      <p>After this lesson, you will know how to approach a long Bagrut-style text without panic.</p>
+      <ul class="goal">
+        <li>Find the main idea quickly.</li>
+        <li>Ignore words that are not important.</li>
+        <li>Use questions before reading.</li>
+        <li>Support answers with evidence from the text.</li>
       </ul>
     </div>
 
-    <div class="panel">
-      <h2>📱 Workbook QR</h2>
-      <p>This is the real material for the QR code on workbook page <strong>U1-002</strong>.</p>
-      <div class="tip">Smart readers do not read more. They read better.</div>
+    <div class="card resource">
+      <h2>🎥 Video Lesson</h2>
+      <p><strong>Coming soon:</strong> Mark explains the strategy in a short video.</p>
+      <p>For now, read the explanation below and complete the mini-practice.</p>
+      <button onclick="document.getElementById('strategy').scrollIntoView({behavior:'smooth'})">Start Lesson</button>
     </div>
   </section>
 
-  <section class="panel" style="margin-top:22px">
-    <h2>🧭 The 4-Step Strategy</h2>
-    <div class="strategy">
-      <div class="step">
-        <div class="step-letter s">S</div>
-        <div>
-          <h3>SCAN</h3>
-          <p>Look at the title, pictures, subtitles, bold words and questions. Do not read the whole text yet.</p>
-          <strong>Question:</strong> What is this text probably about?
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-letter t">T</div>
-        <div>
-          <h3>THINK</h3>
-          <p>Activate what you already know. Good readers bring their own knowledge to the text.</p>
-          <strong>Question:</strong> What do I already know about this topic?
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-letter c">C</div>
-        <div>
-          <h3>CONNECT</h3>
-          <p>While reading, look for relationships: cause and effect, contrast, examples and conclusions.</p>
-          <strong>Useful words:</strong> because, however, therefore, for example, finally.
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-letter a">A</div>
-        <div>
-          <h3>ANSWER</h3>
-          <p>Answer only after you understand the question. Go back to the text and use evidence.</p>
-          <strong>Rule:</strong> Do not answer from memory if the text can prove the answer.
-        </div>
-      </div>
+  <section class="card" id="strategy" style="margin-top:20px">
+    <h2>🧭 SCAN → THINK → CONNECT → ANSWER</h2>
+    <div class="steps">
+      <div class="step"><div class="letter s">S</div><div><h3>SCAN</h3><p>Look at the title, pictures, subtitles, bold words and questions. Do not read every word yet.</p><b>Ask:</b> What is this text probably about?</div></div>
+      <div class="step"><div class="letter t">T</div><div><h3>THINK</h3><p>Activate what you already know. Good readers use background knowledge.</p><b>Ask:</b> What do I already know about this topic?</div></div>
+      <div class="step"><div class="letter c">C</div><div><h3>CONNECT</h3><p>While reading, notice how ideas are connected: cause, contrast, examples and conclusions.</p><b>Look for:</b> because, however, therefore, for example, finally.</div></div>
+      <div class="step"><div class="letter a">A</div><div><h3>ANSWER</h3><p>Read the question carefully, go back to the text and use evidence.</p><b>Rule:</b> Do not answer from memory if the text can prove the answer.</div></div>
     </div>
   </section>
 
-  <section class="lesson-grid" style="margin-top:22px">
-    <div class="panel practice-box">
+  <section class="two" style="margin-top:20px">
+    <div class="card practice">
       <h2>⚡ Mini Practice</h2>
-      <p>Read only the title. Do not read the text yet.</p>
+      <p>Read only the title. Do not read a full text yet.</p>
       <h3>The Power of Habits</h3>
-      <p>What do you think the text is probably about?</p>
-      <div class="choice">
-        <label><input type="checkbox"> healthy routines</label>
-        <label><input type="checkbox"> video games</label>
-        <label><input type="checkbox"> repeated actions</label>
-        <label><input type="checkbox"> space travel</label>
+      <p>What is the text probably about?</p>
+      <div class="choices">
+        <label class="choice"><input type="checkbox"> healthy routines</label>
+        <label class="choice"><input type="checkbox"> repeated actions</label>
+        <label class="choice"><input type="checkbox"> space travel</label>
+        <label class="choice"><input type="checkbox"> learning methods</label>
       </div>
       <p>Write one prediction sentence:</p>
       <textarea placeholder="I think the text is about..."></textarea>
     </div>
 
-    <div class="panel">
+    <div class="card">
       <h2>❌ Common Mistakes</h2>
-      <ul class="mistakes">
+      <ul class="warn">
         <li>Reading every word before looking at the questions.</li>
-        <li>Translating the whole text into Russian or Hebrew.</li>
+        <li>Translating the whole text.</li>
         <li>Getting stuck on one unknown word.</li>
         <li>Guessing without checking the text.</li>
         <li>Copying long sentences instead of answering clearly.</li>
@@ -110,36 +76,75 @@
     </div>
   </section>
 
-  <section class="lesson-grid" style="margin-top:22px">
-    <div class="panel">
+  <section class="card quiz" style="margin-top:20px">
+    <h2>✅ Quick Check</h2>
+    <div class="q">
+      <b>1. What should you do first?</b>
+      <label><input type="radio" name="q1" value="wrong"> Translate the whole text</label>
+      <label><input type="radio" name="q1" value="right"> Scan the title, pictures and questions</label>
+      <label><input type="radio" name="q1" value="wrong"> Write the answers immediately</label>
+    </div>
+    <div class="q">
+      <b>2. Why do we connect ideas?</b>
+      <label><input type="radio" name="q2" value="right"> To understand relationships between ideas</label>
+      <label><input type="radio" name="q2" value="wrong"> To memorize every word</label>
+      <label><input type="radio" name="q2" value="wrong"> To avoid reading the text</label>
+    </div>
+    <button onclick="checkQuiz()">Check my answers</button>
+    <div id="feedback" class="feedback"></div>
+  </section>
+
+  <section class="two" style="margin-top:20px">
+    <div class="card">
       <h2>🤖 AI Reading Coach</h2>
       <p>Open ChatGPT and paste this prompt:</p>
       <div class="codebox">Act as my English reading coach. I am a 10th grade student in Israel moving from 4 Units to 5 Units. Give me a short B1+/B2 reading text and help me use the SCAN → THINK → CONNECT → ANSWER strategy. Ask me one question at a time.</div>
     </div>
 
-    <div class="panel">
-      <h2>🎧 Video & Audio</h2>
-      <p><strong>Video lesson:</strong> Coming soon — Mark explains the strategy.</p>
-      <p><strong>Audio practice:</strong> Coming soon — listen and repeat the strategy steps.</p>
-      <div class="downloads">
-        <a class="download" href="#">📄 Reading Strategy Cheat Sheet — coming soon</a>
-        <a class="download" href="#">✅ Answer Check — coming soon</a>
-      </div>
+    <div class="card">
+      <h2>🎧 Audio Practice</h2>
+      <p>Audio will be added later. For now, read the strategy aloud.</p>
+      <button class="secondary" onclick="speakText()">▶ Listen to strategy summary</button>
+      <p class="badgebox">Smart readers do not read more. They read better.</p>
     </div>
   </section>
 
-  <section class="panel" style="margin-top:22px">
-    <h2>🏆 Challenge</h2>
-    <p>Before you read the next workbook text, give yourself exactly 20 seconds to scan the page.</p>
-    <div class="timer">20 seconds</div>
-    <p>Then answer: <strong>What is the text probably about?</strong></p>
-    <textarea placeholder="My prediction is..."></textarea>
+  <section class="card" style="margin-top:20px">
+    <h2>🏆 Smart Reader Badge</h2>
+    <p>Complete the quick check and write your prediction sentence. Then mark your progress.</p>
+    <div id="stars" class="progress-stars">☆ ☆ ☆ ☆ ☆</div>
+    <button onclick="earnBadge()">I completed the lesson</button>
   </section>
 
   <div class="footer-nav">
-    <a class="small-link" href="page001.html">← Previous: U1-001</a>
-    <a class="small-link" href="page003.html">Next: U1-003 →</a>
+    <a class="small-link" href="page001.html">← U1-001</a>
+    <a class="small-link" href="page003.html">U1-003 →</a>
   </div>
 </main>
+
+<script>
+function checkQuiz(){
+  const q1 = document.querySelector('input[name="q1"]:checked');
+  const q2 = document.querySelector('input[name="q2"]:checked');
+  const fb = document.getElementById('feedback');
+  if(!q1 || !q2){ fb.textContent = "Answer both questions first."; return; }
+  const score = (q1.value === "right") + (q2.value === "right");
+  fb.textContent = score === 2 ? "Excellent! You understand the strategy." : "Good try. Review the steps and try again.";
+}
+function earnBadge(){
+  document.getElementById('stars').textContent = "★ ★ ★ ★ ★";
+  document.getElementById('stars').classList.add('done');
+}
+function speakText(){
+  const text = "Scan first. Think about what you know. Connect ideas while reading. Answer using evidence from the text.";
+  if('speechSynthesis' in window){
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "en-US";
+    speechSynthesis.speak(u);
+  } else {
+    alert(text);
+  }
+}
+</script>
 </body>
 </html>
