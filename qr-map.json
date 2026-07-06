@@ -1,29 +1,125 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>U1-010 — Speaking Lab</title>
-  <link rel="stylesheet" href="../assets/style.css">
-</head>
-<body>
-<header class="unit-header">
-  <nav><div class="logo">English Upgrade</div><a href="index.html">Unit 1</a></nav>
-</header>
-<main class="container">
-  <p class="badge-dark">U1-010</p>
-  <h1>Speaking Lab</h1>
-  <p>Practise speaking with prompts and AI support.</p>
-  <section class="resource-list">
-    <div class="resource"><h3>🎥 Video Lesson</h3><p>Placeholder for the video lesson.</p></div>
-    <div class="resource"><h3>🎧 Audio</h3><p>Placeholder for audio practice.</p></div>
-    <div class="resource"><h3>📚 Vocabulary Trainer</h3><p>Placeholder for flashcards and word games.</p></div>
-    <div class="resource"><h3>✅ Check Answers</h3><p>Placeholder for answer checking.</p></div>
-    <div class="resource"><h3>🤖 AI Coach</h3><p>Prompt-based speaking or writing practice.</p></div>
-  </section>
-  <div class="placeholder">
-    <strong>Future content:</strong> This page will be connected to the QR codes in the workbook.
-  </div>
-</main>
-</body>
-</html>
+{
+  "base_url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/",
+  "unit1_pages": [
+    {
+      "code": "U1-001",
+      "title": "Bridge to 5 Units",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page001.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    },
+    {
+      "code": "U1-002",
+      "title": "Reading Strategy #1",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page002.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    },
+    {
+      "code": "U1-003",
+      "title": "Reading Challenge",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page003.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    },
+    {
+      "code": "U1-004",
+      "title": "Reading Comprehension",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page004.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    },
+    {
+      "code": "U1-005",
+      "title": "Vocabulary Upgrade",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page005.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    },
+    {
+      "code": "U1-006",
+      "title": "Vocabulary in Context",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page006.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    },
+    {
+      "code": "U1-007",
+      "title": "Grammar in Context",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page007.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    },
+    {
+      "code": "U1-008",
+      "title": "Grammar Practice",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page008.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    },
+    {
+      "code": "U1-009",
+      "title": "Listening Challenge",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page009.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    },
+    {
+      "code": "U1-010",
+      "title": "Speaking Lab",
+      "url": "https://YOUR-GITHUB-USERNAME.github.io/english-upgrade-site/unit1/page010.html",
+      "resources": [
+        "video",
+        "audio",
+        "vocabulary",
+        "answers",
+        "ai"
+      ]
+    }
+  ]
+}
