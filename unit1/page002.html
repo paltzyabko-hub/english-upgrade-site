@@ -6,119 +6,60 @@
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-<header class="unit-header"><nav><div class="logo">English Upgrade</div><a href="index.html">Unit 1</a></nav></header>
+<header class="unit-header">
+  <nav><div class="logo">English Upgrade</div><a href="index.html">Unit 1</a></nav>
+</header>
+
 <section class="hero">
   <div class="pills"><span class="pill">UNIT 1</span><span class="pill">PAGE 2</span><span class="pill">For Mark</span></div>
   <h1>Reading Strategy #1</h1>
-  <p>Scan first, think actively, connect ideas, then answer with evidence.</p>
+  <p>Skimming and scanning: read faster, find information, and answer with confidence.</p>
 </section>
+
 <main class="wrap">
   <div class="tabs">
-    <button class="tab" onclick="openTab('video', this)">🎥 Video</button>
+    <button class="tab active" onclick="openTab('video', this)">🎥 Video</button>
     <button class="tab" onclick="openTab('audio', this)">🎧 Audio</button>
     <button class="tab" onclick="openTab('vocab', this)">📚 Vocabulary</button>
     <button class="tab" onclick="openTab('grammar', this)">📖 Grammar</button>
-    <button class="tab active" onclick="openTab('check', this)">📷 Check Page</button>
+    <button class="tab" onclick="openTab('check', this)">📷 Check Page</button>
     <button class="tab" onclick="openTab('ai', this)">🤖 AI Coach</button>
   </div>
 
-  <section id="video" class="panel"><h2>🎥 Video Lesson</h2><div class="video-box">Video placeholder<br>How to Read Like a 5 Units Student</div></section>
-  <section id="audio" class="panel"><h2>🎧 Audio</h2><button onclick="speakText(1)">▶ Normal speed</button> <button class="orange" onclick="speakText(0.65)">🐢 Slow speed</button><div class="card"><p id="audioText">Good readers scan the page, think about the topic, connect ideas and answer using evidence from the text.</p></div></section>
-  <section id="vocab" class="panel"><h2>📚 Vocabulary</h2><div class="card"><b>Words:</b> scan, predict, evidence, connect, main idea, strategy, clue, confidence.</div></section>
-  <section id="grammar" class="panel"><h2>📖 Grammar</h2><div class="card">Use Present Simple for habits and facts. Use Present Continuous for actions happening now.</div></section>
-
-  <section id="check" class="panel active">
-    <h2>📷 Check Workbook Page</h2>
-    <p><b>Fast version for Mark:</b> upload a photo, copy the ready prompt, then send both the photo and the prompt to ChatGPT for checking.</p>
-
-    <div class="upload-zone">
-      <h3>1. Upload or take a photo</h3>
-      <input type="file" accept="image/*" capture="environment" onchange="previewImage(event)">
-      <p>Photo rules: whole A4 page visible, good light, no strong angle, handwriting readable.</p>
-      <img id="preview" class="preview" style="display:none" alt="Workbook page preview">
-    </div>
-
-    <div class="check-grid">
+  <section id="video" class="panel active">
+    <h2>🎥 Video Lesson</h2>
+    <div class="two">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/mbsAtyoNIpU" title="How to use Skimming and Scanning in Reading" allowfullscreen></iframe>
+      </div>
       <div class="card">
-        <h3>2. Photo quality checklist</h3>
-        <ul class="quick-list">
-          <li id="q1" class="status warn">Waiting for photo</li>
-          <li class="status ok">Whole page should be visible.</li>
-          <li class="status ok">Answers should be readable.</li>
-          <li class="status ok">If the photo is blurry, take it again.</li>
+        <h3>Watch this first</h3>
+        <p>This video explains two important reading strategies:</p>
+        <ul>
+          <li><b>Skimming</b> — reading quickly to understand the main idea.</li>
+          <li><b>Scanning</b> — looking for specific information such as names, dates or numbers.</li>
         </ul>
+        <a class="btn" href="https://www.youtube.com/watch?v=mbsAtyoNIpU" target="_blank">Watch on YouTube</a>
       </div>
-
-      <div class="card">
-        <h3>3. What should AI check?</h3>
-        <label><input type="checkbox" checked id="checkAnswers"> answers</label><br>
-        <label><input type="checkbox" checked id="checkGrammar"> grammar</label><br>
-        <label><input type="checkbox" checked id="checkVocab"> vocabulary</label><br>
-        <label><input type="checkbox" checked id="checkAdvice"> what Mark should repeat</label><br><br>
-        <button class="green" onclick="makePrompt()">Create checking prompt</button>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:18px">
-      <h3>4. Copy this prompt</h3>
-      <div id="promptBox" class="copybox">Click “Create checking prompt”.</div><br>
-      <button onclick="copyPrompt()">Copy prompt</button>
-      <button class="light" onclick="openChatGPT()">Open ChatGPT</button>
-    </div>
-
-    <div class="card" style="margin-top:18px">
-      <h3>5. Teacher-style result format</h3>
-      <p>ChatGPT should answer like this:</p>
-      <div class="copybox">Score: __ / __
-
-Correct:
-1. ...
-2. ...
-
-Needs correction:
-Question __
-Your answer: ...
-Better answer: ...
-Explanation: ...
-
-What to repeat:
-...</div>
     </div>
   </section>
 
-  <section id="ai" class="panel"><h2>🤖 AI Coach</h2><div class="copybox">Act as Mark's English coach. Help him understand this workbook page and prepare for 5 Units Bagrut.</div></section>
+  <section id="audio" class="panel"><h2>🎧 Audio</h2><div class="card">Audio will be added next.</div></section>
+  <section id="vocab" class="panel"><h2>📚 Vocabulary</h2><div class="card">Vocabulary trainer will be added next.</div></section>
+  <section id="grammar" class="panel"><h2>📖 Grammar</h2><div class="card">Grammar mini-practice will be added next.</div></section>
+  <section id="check" class="panel"><h2>📷 Check Workbook Page</h2><div class="card">Photo checking tool will be added next.</div></section>
+  <section id="ai" class="panel"><h2>🤖 AI Coach</h2><div class="card">AI prompt will be added next.</div></section>
+
   <div class="footer-nav"><a class="small-link" href="page001.html">← U1-001</a><a class="small-link" href="page003.html">U1-003 →</a></div>
 </main>
 
 <script>
-function openTab(id, btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');}
-function speakText(rate){const text=document.getElementById('audioText').innerText;if('speechSynthesis' in window){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=rate;speechSynthesis.speak(u);}else alert(text);}
-function previewImage(event){const file=event.target.files[0]; if(!file)return; const img=document.getElementById('preview'); img.src=URL.createObjectURL(file); img.style.display='block'; document.getElementById('q1').className='status ok'; document.getElementById('q1').innerText='Photo uploaded. Check that it is clear before sending.';}
-function makePrompt(){
- const parts=[];
- if(document.getElementById('checkAnswers').checked) parts.push('check the answers');
- if(document.getElementById('checkGrammar').checked) parts.push('correct grammar mistakes');
- if(document.getElementById('checkVocab').checked) parts.push('comment on vocabulary use');
- if(document.getElementById('checkAdvice').checked) parts.push('tell Mark what he should repeat');
- const prompt=`You are Mark's English teacher. Mark is 15, lives in Haifa, studies in 10th grade and is moving from 4 Units to 5 Units Bagrut.
-
-I am sending you a photo of his completed workbook page: Unit 1, Page U1-002, Reading Strategy #1.
-
-Please ${parts.join(', ')}.
-
-Use this format:
-1. Overall score.
-2. Correct answers.
-3. Mistakes and corrections.
-4. Short explanations.
-5. What Mark should repeat next.
-6. A short encouraging teacher comment.
-
-Be clear, practical and not too long.`;
- document.getElementById('promptBox').innerText=prompt;
+function openTab(id, btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
 }
-function copyPrompt(){navigator.clipboard.writeText(document.getElementById('promptBox').innerText).then(()=>alert('Prompt copied.'));}
-function openChatGPT(){window.open('https://chatgpt.com/','_blank');}
 </script>
 </body>
 </html>
