@@ -21,13 +21,18 @@
     .video-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:22px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.15);background:#000}
     .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
     .card{background:#fbfdff;border:2px solid #e3f0fb;border-radius:22px;padding:20px}
-    .btn{display:inline-block;border-radius:14px;padding:12px 16px;font-weight:900;background:#06245c;color:white;margin:8px 8px 0 0}
-    .btn.light{background:#eef8ff;color:#06245c;border:2px solid #cceeff}
+    .btn,button{display:inline-block;border:0;border-radius:14px;padding:12px 16px;font-weight:900;background:#06245c;color:white;margin:8px 8px 0 0;cursor:pointer}
+    .btn.light,button.light{background:#eef8ff;color:#06245c;border:2px solid #cceeff}
     .notes-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .note{background:#f7fbff;border-left:7px solid #10a7a7;border-radius:16px;padding:14px}
     table{width:100%;border-collapse:collapse}
     th,td{border-bottom:1px solid #dcecf8;padding:10px;text-align:left}
     th{color:#06245c}
+    .question{background:#fbfdff;border:2px solid #e3f0fb;border-radius:20px;padding:18px;margin:14px 0}
+    .question label{display:block;background:white;border:2px solid #e3f0fb;border-radius:12px;padding:10px;margin:8px 0;cursor:pointer}
+    .feedback{font-weight:900;margin-top:10px}
+    .correct{color:#0b7a3b}.wrong{color:#b00020}
+    .score{font-size:22px;font-weight:900;background:#fff8df;border:2px solid #ffe39a;border-radius:18px;padding:16px;margin-top:18px}
     .nav{display:flex;justify-content:space-between;margin-top:24px}
     .small-link{background:white;border:2px solid #dcecf8;border-radius:14px;padding:12px 16px;font-weight:800}
     @media(max-width:850px){.two,.notes-grid{grid-template-columns:1fr}.hero h1{font-size:36px}main{padding:22px 5vw}}
@@ -99,10 +104,119 @@
       </table>
     </section>
 
+    <section>
+      <h2>🎯 Video Quiz</h2>
+      <p>Choose the best answer. Click <b>Check</b> after each question.</p>
+
+      <div class="question" data-answer="b">
+        <h3>1. What is skimming?</h3>
+        <label><input type="radio" name="q1" value="a"> Reading every word very slowly</label>
+        <label><input type="radio" name="q1" value="b"> Reading quickly to understand the main idea</label>
+        <label><input type="radio" name="q1" value="c"> Looking only for numbers</label>
+        <button onclick="checkOne(1,'b','Correct! Skimming helps you understand the general idea quickly.')">Check</button>
+        <div id="f1" class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <h3>2. What is scanning?</h3>
+        <label><input type="radio" name="q2" value="a"> Looking for specific information</label>
+        <label><input type="radio" name="q2" value="b"> Reading for pleasure</label>
+        <label><input type="radio" name="q2" value="c"> Memorizing the whole text</label>
+        <button onclick="checkOne(2,'a','Correct! Scanning is used to find details like dates, names or numbers.')">Check</button>
+        <div id="f2" class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <h3>3. When should you use skimming?</h3>
+        <label><input type="radio" name="q3" value="a"> When you need one date</label>
+        <label><input type="radio" name="q3" value="b"> When you want to copy a sentence</label>
+        <label><input type="radio" name="q3" value="c"> When you want to understand what the text is mainly about</label>
+        <button onclick="checkOne(3,'c','Correct! Skimming is useful before detailed reading.')">Check</button>
+        <div id="f3" class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="b">
+        <h3>4. Which details are useful for scanning?</h3>
+        <label><input type="radio" name="q4" value="a"> The mood of the story</label>
+        <label><input type="radio" name="q4" value="b"> Names, dates, numbers and keywords</label>
+        <label><input type="radio" name="q4" value="c"> Every adjective in the text</label>
+        <button onclick="checkOne(4,'b','Correct! These details are easy to search for quickly.')">Check</button>
+        <div id="f4" class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <h3>5. Before reading a long text, it is useful to look at...</h3>
+        <label><input type="radio" name="q5" value="a"> the title and headings</label>
+        <label><input type="radio" name="q5" value="b"> only the last word</label>
+        <label><input type="radio" name="q5" value="c"> the dictionary first</label>
+        <button onclick="checkOne(5,'a','Correct! Titles and headings help you predict the topic.')">Check</button>
+        <div id="f5" class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <h3>6. A good reader does NOT need to...</h3>
+        <label><input type="radio" name="q6" value="a"> understand the main idea</label>
+        <label><input type="radio" name="q6" value="b"> find evidence</label>
+        <label><input type="radio" name="q6" value="c"> translate every word</label>
+        <button onclick="checkOne(6,'c','Correct! Translating every word is slow and often unnecessary.')">Check</button>
+        <div id="f6" class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <h3>7. True or False: Scanning can help you find a phone number in a text.</h3>
+        <label><input type="radio" name="q7" value="a"> True</label>
+        <label><input type="radio" name="q7" value="b"> False</label>
+        <button onclick="checkOne(7,'a','Correct! A phone number is specific information.')">Check</button>
+        <div id="f7" class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="b">
+        <h3>8. What should Mark do first with a new Bagrut text?</h3>
+        <label><input type="radio" name="q8" value="a"> Translate the first paragraph</label>
+        <label><input type="radio" name="q8" value="b"> Skim the page and predict the topic</label>
+        <label><input type="radio" name="q8" value="c"> Guess all answers immediately</label>
+        <button onclick="checkOne(8,'b','Correct! First get the general idea, then answer carefully.')">Check</button>
+        <div id="f8" class="feedback"></div>
+      </div>
+
+      <button class="btn" onclick="showScore()">Show total score</button>
+      <div id="score" class="score">Score: not checked yet</div>
+    </section>
+
     <div class="nav">
       <a class="small-link" href="page001.html">← U1-001</a>
       <a class="small-link" href="page003.html">U1-003 →</a>
     </div>
   </main>
+
+<script>
+const results = {};
+function checkOne(num, correct, explanation){
+  const selected = document.querySelector('input[name="q'+num+'"]:checked');
+  const box = document.getElementById('f'+num);
+  if(!selected){
+    box.className = 'feedback wrong';
+    box.textContent = 'Choose an answer first.';
+    return;
+  }
+  if(selected.value === correct){
+    results[num] = true;
+    box.className = 'feedback correct';
+    box.textContent = '✅ ' + explanation;
+  } else {
+    results[num] = false;
+    box.className = 'feedback wrong';
+    box.textContent = '❌ Not quite. Try again and think about the difference between skimming and scanning.';
+  }
+}
+function showScore(){
+  let score = 0;
+  for(let i=1;i<=8;i++){ if(results[i]===true) score++; }
+  const percent = Math.round(score/8*100);
+  let msg = 'Score: ' + score + '/8 (' + percent + '%). ';
+  msg += percent >= 80 ? 'Excellent! Continue to Vocabulary.' : 'Watch the video again and try once more.';
+  document.getElementById('score').textContent = msg;
+}
+</script>
 </body>
 </html>
